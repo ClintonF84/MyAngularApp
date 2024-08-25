@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { MenuComponent } from './menu';
+import { HeaderComponent } from './header';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, MenuComponent, HeaderComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrl: './app.component.sass'
 })
 export class AppComponent {
-  title = 'my-angular-project';
+  title = 'MyAngularApp';
 }
